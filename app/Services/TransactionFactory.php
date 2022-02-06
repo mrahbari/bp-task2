@@ -24,7 +24,7 @@ class TransactionFactory
                 return app(TransactionDBService::class);
 
             default:
-                throw new TransactionInvalidArgumentException('transaction source does not match with the expected value');
+                throw new TransactionInvalidArgumentException('Transaction source does not match with the expected value.');
         }
     }
 }

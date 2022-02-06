@@ -6,12 +6,11 @@
  * @date 2022/02/06 23:00 PM
  */
 
-namespace Tests\Unit\Transactions;
+namespace Tests\Unit;
 
 use App\Exceptions\Transactions\TransactionInvalidArgumentException;
 use App\Exceptions\Transactions\TransactionNotFoundException;
 use App\Models\Transaction;
-use App\Services\Transactions\TransactionFactory;
 use Illuminate\Foundation\Testing\WithFaker;
 use Tests\TestCase;
 

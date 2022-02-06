@@ -16,9 +16,9 @@ class TransactionResource extends AbstractResource
     {
         return [
             'id' => hashids_encode($this->id),
-            'name' => $this->code,
-            'iso2' => $this->amount,
-            'iso3' => $this->user_id,
+            'code' => $this->code,
+            'amount' => $this->amount,
+            'user_id' => $this->user_id,
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
             ];
