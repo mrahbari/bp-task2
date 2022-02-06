@@ -28,8 +28,6 @@ class TransactionCSVService implements TransactionSource
                     $transactions->push(new Transaction($transaction));
                 }
             }
-            dump($transactions);
-
             return $transactions;
         } catch (Exception $e) {
             abort('404', 'Can not open the file.');

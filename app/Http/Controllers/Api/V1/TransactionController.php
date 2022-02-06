@@ -11,6 +11,7 @@ namespace App\Http\Controllers\Api\V1;
 use App\Base\Http\Controllers\BaseApiController;
 use App\Http\Requests\TransactionRequest;
 use App\Http\Resources\TransactionCollection;
+use App\Models\Transaction;
 use App\Services\TransactionFactory;
 
 class TransactionController extends BaseApiController

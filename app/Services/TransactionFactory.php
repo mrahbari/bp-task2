@@ -14,17 +14,24 @@ use App\Exceptions\Transactions\TransactionInvalidArgumentException;
 
 class TransactionFactory
 {
-    public function create(string $source = SourceEnum::DB) : ?TransactionSource
+    /**
+     * Handle source matches based on factory pattern
+     *
+     * @param string|null $source
+     * @return TransactionSource|null
+     */
+    public function create(?string $source): ?TransactionSource
     {
         switch ($source) {
-            case SourceEnum::CSV:
+            case SourceEnum::CSV :
                 return app(TransactionCSVService::class);
 
             case SourceEnum::DB :
                 return app(TransactionDBService::class);
 
-            default:
+            default :
                 throw new TransactionInvalidArgumentException('Transaction source does not match with the expected value.');
+
         }
     }
 }

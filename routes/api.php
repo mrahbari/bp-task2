@@ -20,4 +20,4 @@ use Illuminate\Support\Facades\Route;
 | Api Transaction routes
 |--------------------------------------------------------------------------
 */
-Route::prefix('{api_version}/transactions/{source?}')->where(['api_version' => get_api_versions()])->get('/', [TransactionController::class])->name('api.transactions.invoke');
+Route::get('{api_version}/transactions', TransactionController::class)->where(['api_version' => get_api_versions()])->name('api.transactions.invoke');
