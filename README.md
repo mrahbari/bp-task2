@@ -32,7 +32,6 @@ endpoints:
 - Seeders and Factories
 - Laravel ApiDoc Generator
 - Laravel Api Resources
-- Transaction Api Just for more clarify
 
 ## TDD [PHPUnit and FeatureTest]
 Different forms of writing the test unit had been written with comments.
