@@ -8,25 +8,8 @@
 
 namespace App\Enums;
 
-use ReflectionClass;
-use ReflectionException;
-
 class SourceEnum
 {
     const CSV = 'csv';
     const DB = 'db';
-
-    /**
-     * @return array
-     */
-    public static function getConstants(): array
-    {
-        $constants = [];
-        try {
-            $reflectionClass = new ReflectionClass(self::class);
-            $constants = array_flip($reflectionClass->getConstants());
-        } catch (ReflectionException $e) {
-        }
-        return $constants;
-    }
 }
