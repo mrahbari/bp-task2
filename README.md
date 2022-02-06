@@ -109,23 +109,17 @@ docker-compose exec -ti bp-task2 php artisan test
 ```
 
 ### Run the project and phpmyadmin
-[For Postman Url] (http://bp.local)
+[For Postman Url] (http://bp-task2.local)
 
-[PHPMyAdmin Url] (http://bp.local:8081)
+[PHPMyAdmin Url] (http://bp-task2.local:8081)
 
 
 ### Route lists In Project
 ```
-    +-------------------+--------------------------------------------------+-------------------------+
-    |  http://bp.local  |  GET|HEAD | api/{api_version}/Transactions          | Transactions List          |
-    |  http://bp.local  |  GET|HEAD | api/{api_version}/Transactions/{id}     | Transaction Show            |
-    |  http://bp.local  |  GET|HEAD | api/{api_version}/users              | Users List With Filters |
-    |  http://bp.local  |  GET|HEAD | api/{api_version}/users/transaction      | Users List [Austrian]   |
-    |  http://bp.local  |  DELETE   | api/{api_version}/users/{id}         | Users Deelete           |
-    |  http://bp.local  |  GET|HEAD | api/{api_version}/users/{id}         | Users Show one          |
-    |  http://bp.local  |  PUT      | api/{api_version}/users/{id}/details | Users Details Update    |
-    |  http://bp.local  |  GET|HEAD | openapi                              | Api Docs                |
-    +-------------------+--------------------------------------------------+-------------------------+
+    +-------------------+--------------------------------------------------+---------------------------------------------------------+
+    |  http://bp-task2.local  |  GET|HEAD | api/{api_version}/transactions              | Transactions List  [db and csv source]     |
+    |  http://bp-task2.local  |  GET|HEAD | openapi                                     | Api Docs                                   |
+    +-------------------+--------------------------------------------------+---------------------------------------------------------+
 ```
 
 ## Thanks For Your Patience and attention :)
