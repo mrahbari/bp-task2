@@ -44,7 +44,9 @@ class TransactionFeatureTest extends TestCase
             ->assertJsonStructure($this->transactionStructure);
     }
 
-    /** @test */
+    /**
+     * get all transactions via invalid source parameter
+     */
     public function test_get_transactions_with_invalid_source()
     {
         $this->getJson(route('api.transactions.invoke', ['source' => 'html']))
