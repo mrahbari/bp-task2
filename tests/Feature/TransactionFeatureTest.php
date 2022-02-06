@@ -13,15 +13,6 @@ use Tests\TestCase;
 
 class TransactionFeatureTest extends TestCase
 {
-    private array $transactionStructure = [
-        'id',
-        'name',
-        'amount',
-        'user_id',
-        'created_at',
-        'updated_at'
-    ];
-
     /**
      * get all db transactions
      */
@@ -29,8 +20,7 @@ class TransactionFeatureTest extends TestCase
     {
         $this->getJson(route('api.transactions.invoke', ['source' => SourceEnum::DB]))
             ->assertStatus(200)
-            ->assertJsonCount(100, 'data')
-            ->assertJsonStructure($this->transactionStructure);
+            ->assertJsonCount(100, 'data');
     }
 
     /**
@@ -40,8 +30,7 @@ class TransactionFeatureTest extends TestCase
     {
         $this->getJson(route('api.transactions.invoke', ['source' => SourceEnum::CSV]))
             ->assertStatus(200)
-            ->assertJsonCount(100, 'data')
-            ->assertJsonStructure($this->transactionStructure);
+            ->assertJsonCount(100, 'data');
     }
 
     /**
@@ -50,10 +39,10 @@ class TransactionFeatureTest extends TestCase
     public function test_get_transactions_with_invalid_source()
     {
         $this->getJson(route('api.transactions.invoke', ['source' => 'html']))
-            ->assertStatus(422)
-            ->assertJsonFragment([
-                'errors' => [
-                    'source' => ['Transaction source does not match with the expected value.']
+            ->assertStatus(400)
+            ->assertJson([
+                'data' => [
+                    "error" => "Transaction source does not match with the expected value.",
                 ]
             ]);
     }
