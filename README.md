@@ -7,7 +7,7 @@
 
 [API Test in PHPUnit Video](https://www.loom.com/share/b9413274f2c943fb86022356f2d36638)
 
-[API Documentation](https://github.com/mrahbari/bp-task2/blob/main/public/docs/)
+[API Documentation](https://github.com/mrahbari/bp-task2/blob/main/public/docs/request-docs)
 
 
 ## Requirements
@@ -118,7 +118,7 @@ docker-compose exec -ti bp-task2 php artisan test
 ```
     +-------------------+--------------------------------------------------+---------------------------------------------------------+
     |  http://bp-task2.local  |  GET|HEAD | api/{api_version}/transactions              | Transactions List  [db and csv source]     |
-    |  http://bp-task2.local  |  GET|HEAD | openapi                                     | Api Docs                                   |
+    |  http://bp-task2.local  |  GET|HEAD | request-docs                                | Api Docs                                   |
     +-------------------+--------------------------------------------------+---------------------------------------------------------+
 ```
 
